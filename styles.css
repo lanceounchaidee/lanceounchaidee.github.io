@@ -27,7 +27,7 @@
     position: relative; /* Ensure child elements are positioned relative to this container */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items at the start of the container */
     color: #000000; /* Black text color */
 }
 
@@ -51,7 +51,6 @@
 .top-header h1 {
     margin: 0;
     position: relative;
-    top: 10px; /* Move the name 10px away from the circle */
 }
 
 /* Styles for the body content */
@@ -62,17 +61,56 @@
     margin-top: 20px; /* Create space between header and body */
 }
 
-/* Styles for the left section of the body content */
+/* Styles for the left section content */
 .left-section {
-    flex: 1;
+    flex: 3;
     padding: 20px;
-    background-color: #b5b1b2; /* Left section color */
-    border-right: 2px solid #ccc; /* Add a border between sections */
+    background-color: #f5f5f5; /* Banner color */
+    border-right: 2px solid #ccc;
+    color: #000;
 }
 
-/* Styles for the right section of the body content */
+/* Styles for the right section content */
 .right-section {
     flex: 1;
     padding: 20px;
-    background-color: #a9afd1; /* Right section color */
+    background-color: #ffffff; /* Right section background color */
+    color: #000;
+}
+
+/* Styles for the section headings */
+.left-section h2,
+.right-section h2 {
+    color: #000;
+}
+
+/* Styles for the skills list */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Styles for each skill item */
+.skills-list li {
+    margin-bottom: 15px; /* Adjust space between skills */
+    background-color: #ADA9B7;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Styles for the skill bar */
+.skill-bar {
+    display: block;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Styles for the skill level within the bar */
+.skill-level {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #A1CDF4; /* Adjust bar color */
 }
