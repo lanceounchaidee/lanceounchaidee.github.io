@@ -1,25 +1,76 @@
+/* Styles for the top header */
 .top-header {
+    position: relative;
     background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
-  }
-  
-  .header-content {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden; /* Ensure the large circle is contained within the header */
+}
+
+/* Styles for the large circle */
+.large-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #e0e0e0; /* Adjust color as needed */
+    z-index: -1; /* Move the large circle behind the content */
+}
+
+/* Styles for the header content */
+.header-content {
+    position: relative; /* Ensure child elements are positioned relative to this container */
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .circle {
+}
+
+/* Styles for the circular image */
+.circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
-  }
-  
-  .circle img {
+}
+
+/* Styles for the circular image's content */
+.circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
+
+/* Styles for the name */
+.top-header h1 {
+    margin: 0;
+    position: relative;
+    top: 10px; /* Move the name 10px away from the circle */
+}
+
+/* Styles for the body content */
+.body-content {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Styles for the left section of the body content */
+.left-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Adjust as needed */
+    border-right: 2px solid #ccc; /* Add a border between sections */
+}
+
+/* Styles for the right section of the body content */
+.right-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9; /* Adjust as needed */
+}
