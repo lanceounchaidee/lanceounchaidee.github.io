@@ -8,10 +8,8 @@
     overflow: hidden;
     margin-bottom: 20px;
     border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7); /* Updated box shadow */
+    margin: 20px;
 }
 
 body {
@@ -70,33 +68,26 @@ body {
     margin-bottom: 15px;
 }
 
-.about-section {
-    position: relative;
-    padding: 20px;
-    background-color: #291278;
-    overflow: hidden;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    margin: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
+.about-section,
 .experience-section {
     position: relative;
     padding: 20px;
-    background-color: #3f116c;
     overflow: hidden;
     margin-bottom: 20px;
     border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
+    border-radius: 15px; /* Add border radius */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7); /* Updated box shadow */
     margin: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
+.about-section {
+    background-color: #292bb2;
+}
+.experience-section {
+    background-color: #3f116c;
+}
+
 
 .experience-section h2 {
     margin: 0;
@@ -113,26 +104,28 @@ body {
     margin-bottom: 5px;
 }
 
+.left-section,
+.right-section {
+    padding: 20px;
+    color: #000;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0; /* Remove border radius */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7); /* Updated box shadow */
+}
+
 .left-section {
     flex: 3;
-    padding: 20px;
+    border-radius: 15px;
     background-color: #5eb1da;
-    color: #000;
     margin-right: 5px;
     margin-left: 20px;
-    border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
 }
 
 .right-section {
     flex: 1;
-    padding: 20px;
     background-color: #b9eedc;
-    color: #000;
     margin-left: 5px;
     margin-right: 20px;
-    border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
 }
 
 .text-content {
@@ -177,18 +170,29 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 .skill-bar {
-    display: block;
+    width: 270px;
+    height: 1em;
+    position: relative;
+    display: flex;
     background-color: #ddd;
-    height: 10px;
-    border-radius: 5px;
+    border-radius: 1em;
     margin-bottom: 5px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    color: white;
 }
 
-.skill-level {
-    display: block;
+.skill-bar::before {
+    content: attr(data-label);
+    display: flex;
+    position: absolute;
+    min-width: 1em;
+    width: calc(var(--width, 0)* 1%);
+    max-width: 100;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 1em;
     background-color: #292bb2;
 }
