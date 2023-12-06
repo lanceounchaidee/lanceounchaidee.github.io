@@ -197,3 +197,45 @@ body {
     background-image: linear-gradient(to right, #5eb1da ,#292bb2 );
     
 }
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-button {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -1px -1px 1px -1px rgba(255, 255, 255, 0.7);
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 200px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.info-button:hover + .info-box,
+.info-box:hover {
+    display: block;
+}
+table {
+    border-collapse: collapse; /* Ensure no space between table cells */
+    width: 100%; /* Adjust the width as needed */
+}
+
+th {
+    padding: 10px; /* Adjust the padding to increase or decrease space */
+}
